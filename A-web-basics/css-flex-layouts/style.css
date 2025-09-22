@@ -1,0 +1,59 @@
+/* 全局样式 */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;         
+  flex-direction: column; 
+  min-height: 100vh;    /* 确保 body 至少有视口那么高 */  
+}
+
+/* 示例 1：导航条 */
+.nav-bar {
+  display: flex;               /* 横向排列 */
+  justify-content: space-between; /* 左右分散 */
+  align-items: center;         /* 垂直居中 */
+  background-color: #333;
+  padding: 0.5rem 1rem;
+  color: white;
+}
+
+.nav-links a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+/* 示例 2：两栏布局 */
+.two-column {
+  display: flex;
+  min-height: 300px;
+}
+
+.sidebar {
+  flex: 0 0 200px;             /* 固定 200px */
+  background: #f4f4f4;
+  padding: 1rem;
+}
+
+.content {
+  flex: 1;                     /* 自适应剩余空间 */
+  padding: 1rem;
+}
+
+/* 示例 3：居中卡片 */
+.center-card {
+  display: flex;
+  justify-content: center;     /* 水平居中 */
+  align-items: center;         /* 垂直居中 */
+  background: #eee;
+  flex: 1;              
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  text-align: center;
+  font-size:x-large;
+}
