@@ -1,0 +1,42 @@
+img {
+  width: 100%;      /* 图片宽度占满网格单元格 */
+  height: 100%;     /* 图片高度占满网格单元格 */
+  object-fit: cover; /* 保持图片纵横比，裁剪多余部分 */
+}
+
+/* 标题居中 */
+.nav-bar {
+  display: flex;                /* 开启 Flex 布局 */
+  justify-content: center;      /* 主轴（横向）居中 */
+  align-items: center;          /* 交叉轴（纵向）居中 */
+
+  color: whitergb(0, 0, 0);
+  height: 100px; /* 增加高度，让居中效果更明显 */
+}
+
+/* 图片网格布局 */
+section {
+  display: grid;
+  gap: 15px; 
+  padding: 15px; 
+ 
+  /* 默认：3列 */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows:repeat(2,1fr) ;
+  
+}
+
+/* 媒体查询：屏幕尺寸 < 1024px 时切换为 2 列 */
+@media (max-width: 1023px) {
+  section {
+    grid-template-columns: repeat(2, 1fr);
+    
+  }
+}
+
+/* 媒体查询：屏幕尺寸 < 600px 时切换为 1 列 */
+@media (max-width: 599px) {
+  section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
